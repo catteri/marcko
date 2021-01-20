@@ -25,7 +25,6 @@
     &__list-link{
         color:$title;
         padding:0 2px;
-
         &:hover{
             color:$accent;
             border-bottom: 1px solid $accent;
@@ -240,10 +239,10 @@
                 button{
                     border-color: $accent;
                 }
-                    }
             }
         }
     }
+}
 
 
 
