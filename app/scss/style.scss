@@ -402,6 +402,130 @@
     }
 }
 
+.product{
+    padding: 105px 0 120px;
+    text-align:center;
+    &__text{
+    margin-bottom:50px;
+    }
+    &__items{
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap:45px 30px;
+
+    }
+
+    &__link{
+        margin-top:55px;
+        text-transform: uppercase;
+        color:$title;
+        display:inline-block;
+        padding: 14px 27px;
+        border:1px solid $accent;
+    }
+
+}
+
+.product__item{
+    max-width: 370px;
+    text-align:center;
+    &-img__box{
+        position:relative;
+        height: 370px;
+        overflow:hidden;
+        margin-bottom:20px;
+    }
+    &-link_box{
+        transition:all .3s;
+        position:absolute;
+        bottom:50px;
+        left:0;
+        right:0;
+        display:inline-block;
+        background-color:#fff;
+        width:220px;
+        height: 50px;
+        margin:0 auto;
+        border-radius:28px;
+        z-index:10;
+        display:flex;
+        align-items:center;
+        justify-content: space-around;
+        transform:translateY(300%);
+    }
+
+    &-link--line::before{
+        content:'';
+        position:absolute;
+        width:1px;
+        height: 30px;
+        background-color:#ececec;
+        top:10px;
+        left:70px;
+    }
+    &-link--line::after{
+        content:'';
+        position:absolute;
+        width:1px;
+        height: 30px;
+        background-color:#ececec;
+        top:10px;
+        right:70px;
+    }
+
+    &-link{
+       transition:all .3s; 
+       display:inherit;
+    }
+    &-link:hover{
+        path{
+            fill:$accent;
+        }
+    }
+    &-images{
+         object-fit: cover;
+    }
+    &:hover{
+        .product__item-link_box{
+            transform:translateY(0);
+        }
+    }
+    &-title{
+        font-size:22px;
+        padding: 15px 0 20px;
+    }
+    &-new__price{
+        display:flex;
+        justify-content:center;
+        padding:0 12px;
+        @extend %roboto-400;
+        color:$accent;
+    }
+    &-old__price{
+        display:flex;
+        justify-content:center;
+        padding:0 12px;
+        @extend %roboto-400;
+        color:$title;
+        text-decoration: line-through;
+    }
+
+    &--sale{
+        .product__item-img__box::before{
+            content:"SALE";
+            @extend %btn;
+            position:absolute;
+            top:25px;
+            left:25px;
+        }
+    }
+
+    .star{
+        margin:0 auto;
+    }
+}
+
+
 
 
 

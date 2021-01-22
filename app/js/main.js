@@ -8,9 +8,13 @@ $(function(){
         autoplaySpead:2000
     });
 
-    $(".video__fashion-play").fancybox({        
-        dots: false,
-        arrows:false
-});
+    $('.star').rateYo({
+        starWidth: "17px",
+        normalFill: "#ccccce",
+        rateFill: "#ffc35b",
+        numStars: 5,
+        readOnly:true
+        
+    });
 
 });
