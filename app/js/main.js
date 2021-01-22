@@ -8,4 +8,9 @@ $(function(){
         autoplaySpead:2000
     });
 
+    $(".video__fashion-play").fancybox({        
+        dots: false,
+        arrows:false
+});
+
 });
