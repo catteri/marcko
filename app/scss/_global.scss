@@ -38,12 +38,60 @@ display:flex;
 
 .container-slider{
     max-width: 1560px;
+    margin:0 auto;
+    padding:0 15px;
 }
+
 
 a{
  color:$default;
 font-size:16px;
 line-height: 36px;
 @extend %quicksand-400;   
+}
+
+.breadcrumbs{
+    display:inline-flex;
+    justify-content: center;
+    align-items:center;
+    padding-left:25px;
+    position:relative;
+    &::before{
+        content:'';
+        position:absolute;
+        background-image: url(../images/icons/home-icon.svg);
+        width:16px;
+        height: 16px;
+        top:9px;
+        left:0;
+    }
+    &__list{
+        display:flex;
+    }
+    &__item{
+        color:#727272;
+        padding-right:40px;
+        position:relative;
+        &::after{
+            position:absolute;
+            content:'';
+            background-image: url(../images/icons/angle-right.svg);
+            width:9px;
+            height: 10px;
+            top:13px;
+            right: 15px;
+            
+        }
+        &:last-child{
+            color:$accent;
+            padding-right:0;
+            &:last-child::after{
+                display:none;
+            }
+        }
+    }
+    &__link{
+        color:inherit;
+    }
 }
 
