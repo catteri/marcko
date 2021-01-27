@@ -21,6 +21,7 @@
     "gulp-concat": "^2.6.1",
     "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^4.1.0",
+    "ion-rangeslider": "^2.3.1",
     "jquery": "^3.5.1",
     "rateyo": "^2.3.2",
     "slick-carousel": "^1.8.1"

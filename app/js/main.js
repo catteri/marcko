@@ -1,5 +1,12 @@
 $(function(){
 
+  $('.filter-price__input').ionRangeSlider({
+      type: "double"
+
+  });
+
+  
+
     $('.top__slider-inner').slick({
         dots: true,
         arrows: false,
