@@ -42,6 +42,13 @@ display:flex;
     padding:0 15px;
 }
 
+.jq-ry-normal-group{
+    display:none;
+}
+.jq-ry-container{
+    padding-bottom:15px;
+}
+
 
 a{
  color:$default;
@@ -98,3 +105,49 @@ line-height: 36px;
 .header--404-page{
     background-color:$bg;
 }
+
+.pagination{
+    display:flex;
+    justify-content: center;
+    padding: 30px 0;
+    .pagination__list{
+        display:flex;
+        padding: 0 35px;
+    }
+    &__item{
+        padding:0 15px;
+    }
+    &__link--active{
+        color:$accent;
+    }
+    &__item-span{
+        padding-top: 6px;
+    }
+    &__arrows{
+        text-transform: uppercase;
+        position: relative;
+        &::before{
+            content:'';
+            position: absolute;
+            width: 5px;
+            height: 10px;
+            top:13px;
+        }
+    }
+
+        &__prev{
+            padding-left:15px;
+            &::before{
+            background-image:url('../images/icons/angle_left.svg');
+            left:0;
+        }
+    }
+        &__next{
+            padding-right:15px;
+            &::before{
+            background-image:url('../images/icons/angle_right.svg');
+            right:0;
+        }
+    }
+    }
+

@@ -440,6 +440,97 @@
 
 .product__item{
     max-width: 370px;
+    text-align: center;
+    &.product__item--list{
+        min-width: 100%;
+        display:flex;
+        text-align: left;
+
+        &:hover{
+             .product__item-link_box{
+                transform:translateY(-280%);
+            }
+        }
+        .product__item-img__box{
+            min-width:200px;
+            img{
+               height: 250px; 
+            }
+        }
+        .ptoduct__item-text{
+                margin-bottom: 25px;
+                overflow: hidden;
+            }
+
+        .product__item-btn{
+                color:#fff;
+                padding: 11px 40px;
+                background-color:$title;
+                border:none;
+                cursor:pointer;
+                &:hover{
+                     box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
+                    background-color:$accent;
+                }
+
+            }
+
+        .product__item-link_box{
+            background-color:transparent;
+            width:115px;
+            box-shadow:none;
+            bottom:auto;
+            .product__item-link{
+                width: 50px;
+                height: 50px;
+                background-color:#fff;
+                display:flex;
+                justify-content: center;
+                align-items:center;
+                border-radius:50%;
+                }
+                .product__item-link--line{
+                display:none;
+                }
+        }
+        .product__item-content__box{
+            display:block;
+        }
+        .product__item-item__box{
+            display:flex;
+            flex-wrap: wrap;
+        }
+        .product__item-wrapper__box{
+            padding: 30px 40px;
+            border:1px solid #ececec;
+            border-left:none;
+        }
+        .product__item-title{
+            order:-1;
+            width:100%;
+            padding: 0;
+            margin-bottom: 10px;
+        }
+        .product__item-price{
+            display:flex;
+            order:-1;
+            margin-left:-12px;
+        }
+        .star{
+            display: contents;
+            margin-left: 23px;
+        }
+        .jq-ry-container{
+        margin-bottom: 5px;
+        display: inline-block;
+        margin-left: 0px;
+}
+        
+    }
+
+    &-content__box{
+        display:none;
+    }
     text-align:center;
     &-img__box{
         position:relative;
@@ -1040,6 +1131,89 @@ padding: 35px 30px 40px;
         border:1px solid $default;
         padding: 10px 20px;
     }
+}
+
+.shop-content{
+    width:100%;
+    &__inner{
+        display:flex;
+        justify-content: space-between;
+        flex-wrap:wrap;
+        border-bottom:1px solid #ececec;
+    }
+    &__filter{
+        border:1px solid #ececec;
+        padding: 20px 25px 20px 10px;
+        margin-bottom: 40px;
+        display:flex;
+        justify-content: space-between;
+    }
+    &__filter-btn{
+        border:none;
+        background-color:transparent;
+        padding:0;
+        line-height: 0;
+        cursor:pointer;
+        margin-left:15px;
+        outline:none;
+        &.shop-content__filter-btn--active{
+            path{
+                fill:$accent;
+            }
+        }
+    }
+    &__filter-buttons{
+        display:flex;
+        align-items:center;
+    }
+    &__filter-select{
+        display:flex;
+    }
+
+    
+}
+
+.jq-selectbox__select{
+    display:flex;
+    position:relative;
+    height: 32px;
+    padding: 0  30px 0 0;
+    border:none;
+    background-color:transparent;
+    background:transparent;
+    box-shadow:none;
+    color:$default;
+    text-shadow: none;
+    @extend %quicksand-500;
+    outline:none;
+    margin-left:30px;
+    &:hover{
+        background-color:transparent;
+    }
+}
+
+.jq-selectbox__trigger {
+    border-left: none;
+}
+
+.jq-selectbox__trigger-arrow {
+    top:12px;
+    right: 15px;
+    position: absolute;
+    width: 10px;
+    height: 5px;
+    border:none;
+    background-image:url('../images/icons/angle-down.svg');
+}
+
+.shop-content__filter-buttons button{
+    border:none;
+    outline:none;
+    background-color:transparent;
+    padding: 0;
+    line-height: 0;
+    cursor: pointer;
+    margin-left: 15px;
 }
 
 
