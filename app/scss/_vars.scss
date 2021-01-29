@@ -34,3 +34,11 @@ $bg:#f6f6f6;
     padding:12px 26px;
 }
 
+%checkbox-hidden{
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    position:absolute;
+}
+
